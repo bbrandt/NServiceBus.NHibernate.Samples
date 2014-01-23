@@ -2,7 +2,7 @@
 {
     using NServiceBus;
 
-    class InititalizeSubscriptionStorage : IWantCustomInitialization
+    class InititalizeSubscriptionStorage : INeedInitialization
     {
         public void Init()
         {
