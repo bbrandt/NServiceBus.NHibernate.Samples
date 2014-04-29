@@ -67,7 +67,7 @@
       <Link>UnobtrusiveMessageConventions.cs</Link>
     </Compile>
     <Compile Include="EndpointConfig.cs" />
-    <Compile Include="InitializeNHibernatePersistence.cs" />
+    <Compile Include="InitializePersistence.cs" />
     <Compile Include="ProvisionDownloadHandler.cs" />
   </ItemGroup>
   <ItemGroup>
