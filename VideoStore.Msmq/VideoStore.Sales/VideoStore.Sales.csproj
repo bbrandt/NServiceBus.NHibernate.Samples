@@ -67,10 +67,9 @@
       <Link>UnobtrusiveMessageConventions.cs</Link>
     </Compile>
     <Compile Include="EndpointConfig.cs" />
-    <Compile Include="InitializeNHibernatePersistence.cs" />
+    <Compile Include="InitializePersistence.cs" />
     <Compile Include="SubmitOrderHandler.cs" />
     <Compile Include="ProcessOrderSaga.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

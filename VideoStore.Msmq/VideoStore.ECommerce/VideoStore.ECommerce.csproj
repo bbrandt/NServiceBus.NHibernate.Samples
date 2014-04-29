@@ -166,8 +166,6 @@
     </Compile>
     <Compile Include="Handlers\OrderIsReadyHandler.cs">
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs">
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs">

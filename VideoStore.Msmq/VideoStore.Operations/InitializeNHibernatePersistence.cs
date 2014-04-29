@@ -2,14 +2,14 @@
 {
     using NServiceBus;
 
-    class InititalizeSubscriptionStorage : INeedInitialization
+    class InitializePersistence : INeedInitialization
     {
         public void Init()
         {
-            NServiceBus.Configure.Instance
-                .UseNHibernateSubscriptionPersister() // subscription storage using NHibernate
-                .UseNHibernateTimeoutPersister() // Timeout Persistance using NHibernate
-                .UseNHibernateSagaPersister(); // Saga Persistance using NHibernate
+            Configure.Instance
+                .UseNHibernateSubscriptionPersister() 
+                .UseNHibernateTimeoutPersister() 
+                .UseNHibernateSagaPersister(); 
         }
     }
 }

@@ -69,7 +69,6 @@
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="InitializeNHibernatePersistence.cs" />
     <Compile Include="ProvisionDownloadHandler.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
