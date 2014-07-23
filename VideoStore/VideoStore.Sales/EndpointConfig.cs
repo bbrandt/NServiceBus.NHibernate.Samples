@@ -1,29 +1,20 @@
 namespace VideoStore.Sales
 {
-    using System;
     using NServiceBus;
+    using NServiceBus.Persistence;
 
-    public class EndpointConfig : IConfigureThisEndpoint, AsA_Publisher, UsingTransport<Msmq>, IWantCustomInitialization
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Publisher, UsingTransport<Msmq>, INeedInitialization
     {
-        public void Init()
+        public void Init(Configure config)
         {
-            Configure.With()
-                .DefaultBuilder()
-                .RijndaelEncryptionService();
+            config.UsePersistence<NHibernate>(c => c.For(Storage.Timeouts, Storage.Subscriptions, Storage.Sagas));
+            config.RijndaelEncryptionService();
+        }
+
+        public void Customize(ConfigurationBuilder builder)
+        {
+            builder.Conventions(UnobtrusiveMessageConventions.Init);
         }
     }
 
-
-    public class MyClass:IWantToRunWhenBusStartsAndStops
-    {
-        public void Start()
-        {
-            Console.Out.WriteLine("The VideoStore.Sales endpoint is now started and ready to accept messages");
-        }
-
-        public void Stop()
-        {
-            
-        }
-    }
 }

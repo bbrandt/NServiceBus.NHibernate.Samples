@@ -1,49 +1,29 @@
 namespace VideoStore.ECommerce
 {
+    using NServiceBus.Persistence;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using log4net.Appender;
-    using log4net.Core;
     using NServiceBus;
-    using NServiceBus.Installation.Environments;
 
     public class MvcApplication : HttpApplication
     {
-        private static IBus bus;
-
-        private IStartableBus startableBus;
-
-        public static IBus Bus
-        {
-            get { return bus; }
-        }
+        public static IBus Bus;
 
         protected void Application_Start()
         {
-            startableBus = Configure.With()
-                .DefaultBuilder()
-                .Log4Net(new DebugAppender {Threshold = Level.Warn})
-                .UseTransport<Msmq>()
+            var configure = Configure.With(builder => builder.Conventions(UnobtrusiveMessageConventions.Init))
                 .PurgeOnStartup(true)
-                .UnicastBus()
-                .RunHandlersUnderIncomingPrincipal(false)
                 .RijndaelEncryptionService()
-                .UseNHibernateTimeoutPersister()
-                .CreateBus();
-
-            Configure.Instance.ForInstallationOn<Windows>().Install();
-
-            bus = startableBus.Start();
+                .UsePersistence<NHibernate>(c => c.For(Storage.Timeouts, Storage.Sagas))
+                .EnableInstallers();
+            var startableBus = configure.CreateBus();
+            Bus = startableBus.Start();
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
-        protected void Application_End()
-        {
-            startableBus.Dispose();
-        }
     }
 }

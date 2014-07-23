@@ -11,7 +11,7 @@
     public class ProvisionDownloadResponseHandler : IHandleMessages<ProvisionDownloadResponse>
     {
         public IBus Bus { get; set; }
-        private readonly IDictionary<string, string> videoIdToUrlMap = new Dictionary<string, string>
+        Dictionary<string, string> videoIdToUrlMap = new Dictionary<string, string>
             {
                 {"intro1", "http://youtu.be/6lYF83wKerA"},
                 {"intro2", "http://youtu.be/icze_WCyEdQ"},
@@ -43,7 +43,7 @@
                 }
             });
 
-            Console.Out.WriteLine("Downloads for Order #{0} is ready, publishing it.", message.OrderNumber);
+            Console.WriteLine("Downloads for Order #{0} is ready, publishing it.", message.OrderNumber);
         }
     }
 }

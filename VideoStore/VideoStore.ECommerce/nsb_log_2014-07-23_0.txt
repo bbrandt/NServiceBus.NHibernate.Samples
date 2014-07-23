@@ -1,0 +1,3342 @@
+﻿2014-07-23 15:19:59.622 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:19:59.659 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:19:59.680 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:19:59.724 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:19:59.814 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:20:02.467 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:20:02.549 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:20:03.148 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:20:03.154 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:20:03.155 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:20:03.234 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:20:03.256 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:20:03.267 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:20:44.645 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:20:44.697 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.07 s
+2014-07-23 15:20:44.715 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:20:44.760 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:20:44.871 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:20:47.511 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:20:47.579 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:20:48.196 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:20:48.210 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:20:48.211 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:20:48.289 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:20:48.300 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:20:48.308 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:21:12.528 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:21:12.579 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.06 s
+2014-07-23 15:21:12.625 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:21:12.675 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.07 s
+2014-07-23 15:21:12.788 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:21:15.196 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:21:15.253 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:21:15.908 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:21:15.911 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:21:15.925 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:21:15.978 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:21:16.011 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:21:16.030 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:25:09.701 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:25:09.750 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.06 s
+2014-07-23 15:25:09.777 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:25:09.823 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:25:09.931 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:25:12.379 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:25:12.434 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:25:13.090 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:25:13.093 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:25:13.100 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:25:13.202 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:25:13.210 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:25:13.242 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:28:06.769 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:28:06.806 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:28:06.853 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:28:06.891 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.05 s
+2014-07-23 15:28:06.981 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:28:08.984 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:28:09.030 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:28:09.579 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:28:09.582 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:28:09.584 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:28:09.645 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:28:09.654 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:28:09.660 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:29:37.154 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:29:37.199 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.06 s
+2014-07-23 15:29:37.220 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:29:37.267 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:29:37.401 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:29:39.962 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:29:40.025 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:29:40.540 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:29:40.542 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:29:40.546 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:29:40.585 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:29:40.596 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:29:40.602 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:34:52.517 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:34:52.568 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.06 s
+2014-07-23 15:34:52.590 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:34:52.636 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:34:52.727 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:34:54.819 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:34:54.871 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:34:55.438 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:34:55.440 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:34:55.442 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:34:55.505 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:34:55.535 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:34:55.539 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:36:48.125 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:36:48.183 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.07 s
+2014-07-23 15:36:48.204 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:36:48.244 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.05 s
+2014-07-23 15:36:48.325 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:36:50.409 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:36:50.466 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:36:51.037 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:36:51.040 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:36:51.044 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:36:51.129 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:36:51.139 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:36:51.146 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:38:33.706 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:38:33.744 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:38:33.770 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:38:33.809 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:38:33.889 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:38:35.906 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:38:35.954 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:38:36.517 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:38:36.519 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:38:36.522 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:38:36.601 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:38:36.611 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:38:36.617 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:40:35.812 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:40:35.854 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:40:35.876 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:40:35.914 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.05 s
+2014-07-23 15:40:35.994 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:40:37.983 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:40:38.037 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:40:38.604 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:40:38.606 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:40:38.609 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:40:38.676 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:40:38.685 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:40:38.692 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:44:31.416 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:44:31.455 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:44:31.476 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:44:31.517 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.05 s
+2014-07-23 15:44:31.599 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:44:33.617 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:44:33.663 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:44:34.212 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:44:34.212 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:44:34.214 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:44:34.298 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:44:34.307 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:44:34.313 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:44:52.957 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:44:52.998 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:44:53.039 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:44:53.076 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.05 s
+2014-07-23 15:44:53.162 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:46:59.703 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:46:59.749 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:46:59.773 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:46:59.816 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:46:59.914 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:47:02.145 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:47:02.207 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:47:02.786 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:47:02.789 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:47:02.792 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:47:02.870 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:47:02.879 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:47:02.885 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:48:46.351 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:48:46.392 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:48:46.412 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:48:46.449 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.05 s
+2014-07-23 15:48:46.534 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:48:48.644 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:48:48.698 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:48:49.317 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:48:49.321 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:48:49.325 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:48:49.398 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:48:49.415 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:48:49.420 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:52:25.379 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:52:25.422 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:52:25.444 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:53:23.902 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:53:23.942 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.05 s
+2014-07-23 15:53:23.964 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:53:24.004 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.05 s
+2014-07-23 15:55:05.743 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:55:05.790 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.06 s
+2014-07-23 15:55:05.838 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:55:05.884 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:55:05.981 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:55:08.468 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:55:08.530 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:55:09.155 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:55:09.176 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:55:09.177 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:55:09.255 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:55:09.271 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:55:09.283 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA
+2014-07-23 15:55:45.161 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 8/04/2015. Configuring NServiceBus to run in trial mode.
+2014-07-23 15:55:45.213 INFO  NServiceBus.Configure Invocation of NServiceBus.INeedInitialization completed in 0.06 s
+2014-07-23 15:55:45.239 INFO  NServiceBus.Persistence.EnableSelectedPersistences Activating persistence NHibernate to provide Timeouts,Sagas storage(s)
+2014-07-23 15:55:45.285 INFO  NServiceBus.Configure Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.06 s
+2014-07-23 15:55:45.395 INFO  NServiceBus.Features.UnicastBus Number of messages found: 9
+2014-07-23 15:55:47.949 INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller Skipped adding user 'Retina\simon' to group 'Performance Monitor Users' because the user is already in group.
+2014-07-23 15:55:48.071 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransport
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManagerBasedDeferral]
+Startup Tasks: None
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateGatewayDeduplication
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: NHibernateDBConnectionProvider
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: NHibernateOutboxStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: NHibernateSagaStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: NHibernateStorageSession
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [NHibernateDBConnectionProvider],[NHibernateSagaStorage,NHibernateOutboxStorage]
+
+Name: NHibernateSubscriptionStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing]
+
+Name: NHibernateTimeoutStorage
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: [TimeoutManager],[NHibernateDBConnectionProvider]
+Startup Tasks: None
+
+
+2014-07-23 15:55:48.758 INFO  NServiceBus.Satellites.SatelliteLauncher Started 3/3 NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:55:48.762 INFO  NServiceBus.Satellites.SatelliteLauncher Started 1/3 NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:55:48.765 INFO  NServiceBus.Satellites.SatelliteLauncher Started 2/3 NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c satellite
+2014-07-23 15:55:48.866 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderCancelled, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:55:48.884 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.OrderPlaced, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.Sales@RETINA
+2014-07-23 15:55:48.910 INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.SubscriptionManager Subscribing to VideoStore.Messages.Events.DownloadIsReady, VideoStore.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue VideoStore.ContentManagement@RETINA

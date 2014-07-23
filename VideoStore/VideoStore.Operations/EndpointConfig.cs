@@ -1,28 +1,20 @@
 namespace VideoStore.Operations
 {
-    using System;
+    using NServiceBus.Persistence;
     using NServiceBus;
 
-	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, UsingTransport<Msmq>, IWantCustomInitialization
+	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, UsingTransport<Msmq>, INeedInitialization
     {
-        public void Init()
+	    public void Init(Configure config)
+	    {
+            config.UsePersistence<NHibernate>(c => c.For(Storage.Timeouts, Storage.Subscriptions, Storage.Sagas));
+	    }
+
+	    public void Customize(ConfigurationBuilder builder)
         {
-            Configure.With()
-                .DefaultBuilder()
-                .UseNHibernateTimeoutPersister();
-        }
+            builder.Conventions(UnobtrusiveMessageConventions.Init);
+	    }
     }
 	
-    public class MyClass : IWantToRunWhenBusStartsAndStops
-    {
-        public void Start()
-        {
-            Console.Out.WriteLine("The VideoStore.Operations endpoint is now started and ready to accept messages");
-        }
 
-        public void Stop()
-        {
-
-        }
-    }
 }
