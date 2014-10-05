@@ -3,17 +3,18 @@ namespace VideoStore.Sales
     using NServiceBus;
     using NServiceBus.Persistence;
 
-    public class EndpointConfig : IConfigureThisEndpoint, AsA_Publisher, UsingTransport<Msmq>, INeedInitialization
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, UsingTransport<MsmqTransport>
     {
-        public void Init(Configure config)
+        public void Customize(BusConfiguration configuration)
         {
-            config.UsePersistence<NHibernate>(c => c.For(Storage.Timeouts, Storage.Subscriptions, Storage.Sagas));
-            config.RijndaelEncryptionService();
-        }
-
-        public void Customize(ConfigurationBuilder builder)
-        {
-            builder.Conventions(UnobtrusiveMessageConventions.Init);
+            configuration.UsePersistence<NHibernatePersistence>();
+            configuration.Conventions()
+                .DefiningCommandsAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("Commands"))
+                .DefiningEventsAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("Events"))
+                .DefiningMessagesAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("RequestResponse"))
+                .DefiningEncryptedPropertiesAs(p => p.Name.StartsWith("Encrypted"));
+            configuration.RijndaelEncryptionService();
+        
         }
     }
 

@@ -4,15 +4,15 @@ namespace VideoStore.CustomerRelations
 {
     using NServiceBus;
 
-    public class EndpointConfig : IConfigureThisEndpoint, AsA_Publisher, UsingTransport<Msmq>, INeedInitialization
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, UsingTransport<MsmqTransport>
     {
-        public void Customize(ConfigurationBuilder builder)
+        public void Customize(BusConfiguration configuration)
         {
-            builder.Conventions(UnobtrusiveMessageConventions.Init);
-        }
-        public void Init(Configure config)
-        {
-            config.UsePersistence<NHibernate>(c => c.For(Storage.Timeouts, Storage.Sagas));
+            configuration.UsePersistence<NHibernatePersistence>();
+            configuration.Conventions()
+                .DefiningCommandsAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("Commands"))
+                .DefiningEventsAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("Events"))
+                .DefiningMessagesAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("RequestResponse"));
         }
     }
 }
