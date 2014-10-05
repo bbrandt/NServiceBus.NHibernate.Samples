@@ -1,20 +1,20 @@
+using NServiceBus.Persistence;
+
 namespace VideoStore.ContentManagement
 {
-    using System;
     using NServiceBus;
 
-    public class EndpointConfig : IConfigureThisEndpoint, AsA_Publisher, UsingTransport<Msmq> { }
-
-    public class MyClass : IWantToRunWhenBusStartsAndStops
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, UsingTransport<MsmqTransport>
     {
-        public void Start()
+        public void Customize(BusConfiguration configuration)
         {
-            Console.Out.WriteLine("The VideoStore.ContentManagement endpoint is now started and subscribed to OrderAccepted events from VideoStore.Sales");
-        }
-
-        public void Stop()
-        {
-
+            configuration.UsePersistence<NHibernatePersistence>();
+            configuration.Conventions()
+                .DefiningCommandsAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("Commands"))
+                .DefiningEventsAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("Events"))
+                .DefiningMessagesAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("RequestResponse"));
         }
     }
+
+
 }
