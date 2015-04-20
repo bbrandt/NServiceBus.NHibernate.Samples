@@ -8,7 +8,10 @@ This repository contains samples that use NHibernate as its persistence for stor
 This sample implements the following workflow of a fictional video store and uses NHibernate as the persistence mechanism for storing the subscriptions, sagas and timeouts in the configured SqlServer database. 
 
 See this article for more information on how to configure NServiceBus to use relational database as the persistence model:
-http://particular.net/articles/relational-persistence-using-nhibernate---nservicebus-4.x
+http://docs.particular.net/nservicebus/nhibernate/
+
+More samples are available here:
+http://docs.particular.net/search?q=nhibernate
 
 In this sample:
 Users can order videos from the website. Once orders are submitted, there is a window of time allocated for handling cancellations due to buyer's remorse. Once the order has been accepted, they are provisioned and made available for download. In implementing the above workflow various aspects are highlighted:
